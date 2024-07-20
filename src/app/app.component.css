@@ -1,0 +1,11 @@
+section{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position:fixed ; /* Fixed positioning to stick to the side */
+    top: 0; /* Align to the top of the viewport */
+    left: 0; /* Align to the left of the viewport */
+    bottom: 0; /* Stretch to the bottom of the viewport */
+    
+}
+

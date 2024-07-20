@@ -1,0 +1,192 @@
+/* src/app/client-form/client-form.component.css */
+.parent-container {
+    display: flex; /* Enable flex layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    width: 100%; /* Full width */
+}
+
+.form-container {
+    display: flex; /* Enable flex layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    width: 40%; /* Width of the form container */
+    padding: 20px; /* Padding around the container */
+    background-color: #f9f9f9; /* Light background color for the form */
+    border-radius: 8px; /* Rounded corners for the form container */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Light shadow for depth */
+    overflow-y: auto; /* Scroll if content overflows vertically */
+    margin: 20px; /* Margin around the container */
+}
+
+/* Heading styling */
+h2 {
+    width: 100%; /* Full width to ensure it spans the container */
+    text-align: center; /* Center the heading text */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Row info styling */
+.row-info {
+    display: flex; /* Enable flex layout for rows */
+    flex-direction: row; /* Arrange items in a row */
+    width: 100%; /* Full width of the container */
+    gap: 20px; /* Space between items in the row */
+    margin-bottom: 20px; /* Space below each row */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+}
+
+/* Specific styling for direccion row */
+.direccion-row .direccion-inputs {
+    display: flex;
+    gap: 10px;
+    flex: 1; /* Allow form groups to grow equally */
+}
+
+/* Form group styling */
+.form-group {
+    display: flex;
+    flex-direction: column; /* Stack label and input vertically */
+    gap: 10px; /* Space between label and input */
+    flex: 1; /* Allow form groups to grow equally */
+}
+
+/* Label styling */
+label {
+    font-weight: bold; /* Bold label text */
+}
+
+/* Input styling */
+input[type="text"],
+input[type="tel"] {
+    padding: 5px; /* Smaller padding inside input fields */
+    border: 1px solid #ccc; /* Border for input fields */
+    border-radius: 4px; /* Rounded corners for input fields */
+    font-size: 14px; /* Smaller font size inside input fields */
+    width: 100%; /* Full width of the form group */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Placeholder styling */
+input[type="text"]::placeholder,
+input[type="tel"]::placeholder {
+    color: #aaa; /* Placeholder text color */
+}
+
+/* Button styling */
+button {
+    padding: 8px 16px; /* Smaller padding inside the button */
+    background-color: #007bff; /* Background color of the button */
+    color: white; /* Text color of the button */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners for the button */
+    font-size: 14px; /* Smaller font size of the button text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    width: 50%; /* Adjustable width for the button */
+    box-sizing: border-box; /* Include padding and border in the button's total width and height */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+}/* Table container styling */
+.table-container {
+    display: flex; /* Use flexbox for horizontal layout */
+    gap: 20px; /* Space between table and form */
+    padding: 20px; /* Padding around the container */
+    .table-space {
+        flex: 2; /* Table takes more space compared to the form */
+        background-color: #d2e0e4; /* Light background color */
+        border-radius: 8px; /* Rounded corners */
+        padding: 20px; /* Padding inside the table container */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Light shadow for depth */
+        overflow-x: auto; /* Enable horizontal scrolling if needed */
+    }
+    
+    /* Table styling */
+    .table-space table {
+        width: 100%; /* Full width of the table container */
+        border-collapse: collapse; /* Collapse borders to avoid double borders */
+        background-color: #ffffff; /* White background color for the table */
+    }
+    
+    /* Table header styling */
+    .table-space thead {
+        background-color: #83c4a4; /* Background color for the table header */
+        color: white; /* Text color for the table header */
+    }
+    
+    /* Table header cells styling */
+    .table-space th {
+        padding: 10px; /* Padding inside header cells */
+        text-align: left; /* Align text to the left */
+        border-bottom: 1px solid #ddd; /* Border below header cells */
+    }
+    
+    /* Table body cells styling */
+    .table-space td {
+        padding: 10px; /* Padding inside table cells */
+        border-bottom: 1px solid #ddd; /* Border below table cells */
+    }
+    
+    /* Table row styling */
+    .table-space tr:nth-child(even) {
+        background-color: #f2f2f2; /* Zebra striping effect */
+    }
+    
+    
+    
+    /* Form styling */
+    .actualizar-space {
+        flex: 1; /* Form takes less space compared to the table */
+        background-color: #f9f9f9; /* Light background color */
+        border-radius: 8px; /* Rounded corners */
+        padding: 20px; /* Padding inside the form container */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Light shadow for depth */
+    }
+    
+    /* Form heading styling */
+    .actualizar-space h2 {
+        text-align: center; /* Center the heading text */
+        margin-bottom: 20px; /* Space below the heading */
+    }
+    
+    /* Form group styling */
+    .form-group {
+        margin-bottom: 15px; /* Space between form groups */
+    }
+    
+    /* Form input styling */
+    input[type="text"],
+    input[type="tel"],
+    select {
+        width: 100%; /* Full width of the form group */
+        padding: 10px; /* Padding inside input fields */
+        border: 1px solid #ccc; /* Border for input fields */
+        border-radius: 4px; /* Rounded corners for input fields */
+        font-size: 16px; /* Font size inside input fields */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    }
+    
+    /* Button styling */
+    button {
+        padding: 10px 20px; /* Padding inside the button */
+        background-color: #007bff; /* Background color of the button */
+        color: white; /* Text color of the button */
+        border: none; /* Remove border */
+        border-radius: 4px; /* Rounded corners for the button */
+        font-size: 16px; /* Font size of the button text */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+        width: 100%; /* Full width of the form container */
+    }
+    
+    /* Button hover effect */
+    button:hover {
+        background-color: #0056b3; /* Darker background color on hover */
+    }
+    
+}
+
+/* Table space styling */

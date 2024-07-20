@@ -1,0 +1,45 @@
+
+/* Container for the flex layout */
+.flex-container {
+    display: flex; /* Enable flex layout */
+    width: 90%;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 30px; /* Space between items */
+    place-content: center; /* Center items horizontally */
+    padding: 20px; /* Padding around the container */
+    margin: 3%; /* Space above the container */
+}
+
+/* Flex item styling */
+.flex-item {
+    background-color: #f4f4f4; /* Background color for items */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding inside each item */
+    display: flex; /* Flexbox to align content */
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    text-align: center; /* Center text */
+    gap: 20px; /* Gap between image and text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    width: calc(25% - 30px); /* Ensure 4 items per row with spacing */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent */
+  }
+
+/* Image styling */
+.item-image {
+    width: 100px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    margin-bottom: 10px; /* Space between image and text */
+    background: transparent; /* Ensure no background color is applied */
+    border: none; /* Ensure no border around the image */
+}
+/* Hover effect */
+.flex-item:hover {
+    background-color: #e0e0e0; /* Change background color on hover */
+}

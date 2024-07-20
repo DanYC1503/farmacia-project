@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .message-container {
+    width: 60%;
+    max-width: 600px; /* Limita el ancho del contenedor del formulario */
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    text-align: left; /* Alinea el contenido de las etiquetas e inputs a la izquierda */
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Asegura que el padding no exceda el ancho del input */
+  }
+  
+  textarea {
+    resize: vertical; /* Permite al usuario ajustar la altura del área de texto */
+  }
+  
+  button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  .whatsapp-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+  }
+  
+  .whatsapp-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #25D366; /* WhatsApp Green */
+    font-size: 1.2em;
+  }
+  
+  .whatsapp-icon img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: transparent; /* Asegura que el fondo de la imagen sea transparente */
+    border-radius: 50%; /* Si deseas un fondo redondeado, opcional */
+    box-shadow: none; /* Elimina cualquier sombra aplicada a la imagen */
+  }
+  .container-space {
+    width: 80%; /* Ajusta el ancho según el diseño deseado */
+    max-width: 600px; /* Establece un ancho máximo para mantener el contenedor a un tamaño adecuado */
+    display: grid;
+    place-items: center; /* Centra el contenido tanto horizontal como verticalmente */
+    border: 1px solid #7e7d7d; /* Color y grosor del borde */
+    border-radius: 15px; /* Radio del borde para hacer los bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del contenedor */
+    background-color: #fff; /* Color de fondo blanco para el contenedor */
+    height: 60%; /* Ajusta la altura automáticamente según el contenido */
+    margin: 0 auto; /* Centra el contenedor horizontalmente en su contenedor padre */
+  }
+  
+  .whatsapp-icon span {
+    vertical-align: middle;
+  }
+  .rectangle-becaus-agh{
+    width: 100%;
+    height: 30px;
+  }

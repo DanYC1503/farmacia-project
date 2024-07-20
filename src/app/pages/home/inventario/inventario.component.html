@@ -1,0 +1,70 @@
+<h1>Inventario de la farmacia</h1>
+
+<div class="dropdown-container">
+  <label for="dropdown">Seleccione una categoria del inventario:</label>
+  <select id="dropdown" (change)="onSelectChange($event)">
+    <option value="">--Select--</option>
+    <option value="medicamentos">Medicamentos</option>
+    <option value="ordenes">Ordenes</option>
+  </select>
+</div>
+
+<div *ngIf="selectedCategory === 'medicamentos'" class="filter-container">
+  <h2>Filtros</h2>
+  <div class="checkbox-group">
+    <label><input type="checkbox" (change)="onFilterChange($event, 'dosis')"> Dosis</label>
+    <label><input type="checkbox" (change)="onFilterChange($event, 'price')"> Precio</label>
+    <label><input type="checkbox" (change)="onFilterChange($event, 'endDate')"> Fecha de caducidad</label>
+  </div>
+</div>
+
+<div class="table-container">
+  <table [class.hidden]="selectedCategory !== 'medicamentos'" id="table-medicamentos">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th *ngIf="filters['dosis']">Dosis</th>
+        <th *ngIf="filters['price']">Precio</th>
+        <th *ngIf="filters['endDate']">Fecha de caducidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Aspirina</td>
+        <td>Analgésico</td>
+        <td *ngIf="filters['dosis']">500 mg</td>
+        <td *ngIf="filters['price']">$5</td>
+        <td *ngIf="filters['endDate']">2024-12-31</td>
+      </tr>
+      <tr>
+        <td>Ibuprofeno</td>
+        <td>Antiinflamatorio</td>
+        <td *ngIf="filters['dosis']">200 mg</td>
+        <td *ngIf="filters['price']">$8</td>
+        <td *ngIf="filters['endDate']">2025-06-30</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<table [class.hidden]="selectedCategory !== 'ordenes'" id="table-ordenes">
+    <thead>
+      <tr>
+        <th>OrderID</th>
+        <th>Nombre Cliente</th>
+        <th>RUC Cliente</th>
+        <th>Fecha Realizacion</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders" [class.hidden]="order.estado !== 'ongoing'">
+        <td>{{ order.orderID }}</td>
+        <td>{{ order.nombreCliente }}</td>
+        <td>{{ order.rucCliente }}</td>
+        <td>{{ order.fechaRealizacion }}</td>
+        <td>{{ order.estado }}</td>
+      </tr>
+    </tbody>
+  </table>

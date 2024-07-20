@@ -1,0 +1,139 @@
+<h1>Informes de la farmacia</h1>
+
+    <div class="dropdown-container">
+    <label for="dropdown">Seleccione una categoria del informe:</label>
+    <select id="dropdown" (change)="onSelectChange($event)">
+        <option value="">--Select--</option>
+        <option value="clientes">Clientes</option>
+        <option value="medicamentos">Medicamentos</option>
+        <option value="inventario">Inventario</option>
+        <option value="ordenes">Ordenes</option>
+        <option value="facturas">Facturas</option>
+    </select>
+    </div>
+
+<div class="table-container">
+  <table [class.hidden]="selectedCategory !== 'clientes'" id="table-clientes">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Cedula</th>
+        <th>Telefono</th>
+        <th>Direccion</th>
+        <th>Provincia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John Doe</td>
+        <td>johnexample.com</td>
+        <td>123-456-7890</td>
+        <td>example direccion</td>
+        <td>Azuay</td>
+      </tr>
+      <tr>
+        <td>Jane Smith</td>
+        <td>janeexample.com</td>
+        <td>098-765-4321</td>
+        <td>Monay</td>
+        <td>Quito</td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- Add other tables here for other categories (medicamentos, inventario, ordenes, facturas) -->
+</div>
+<div *ngIf="selectedCategory === 'medicamentos'" class="filter-container">
+    <h2>Filtros</h2>
+  </div>
+  
+<div class="table-container">
+    <table [class.hidden]="selectedCategory !== 'medicamentos'" id="table-medicamentos">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Dosis</th>
+          <th>Precio</th>
+          <th>Fecha de caducidad</th>
+          <th>Stock</th>
+          <th>Estado de Stock</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let medicamento of medicamentos">
+          <td>{{ medicamento.nombre }}</td>
+          <td>{{ medicamento.descripcion }}</td>
+          <td>{{ medicamento.dosis }}</td>
+          <td>{{ medicamento.precio }}</td>
+          <td>{{ medicamento.fechaCaducidad }}</td>
+          <td>{{ medicamento.stock }}</td>
+          <td>{{ medicamento.stockStatus }}</td>
+        </tr>
+      </tbody>
+    </table>
+  <!-- Inventario Table -->
+  <table [class.hidden]="selectedCategory !== 'inventario'" id="table-inventario">
+    <thead>
+      <tr>
+        <th>Medicamento Nombre</th>
+        <th>Stock</th>
+        <th>Proveedor</th>
+        <th>Ventas</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of inventario">
+        <td>{{ item.nombre }}</td>
+        <td>{{ item.stock }}</td>
+        <td>{{ item.proveedor }}</td>
+        <td>{{ item.ventas }}</td>
+        <td>{{ item.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Ordenes Table -->
+  <table [class.hidden]="selectedCategory !== 'ordenes'" id="table-ordenes">
+    <thead>
+      <tr>
+        <th>OrderID</th>
+        <th>Nombre Cliente</th>
+        <th>RUC Cliente</th>
+        <th>Fecha Realizacion</th>
+        <th>Fecha Final</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{ order.orderID }}</td>
+        <td>{{ order.nombreCliente }}</td>
+        <td>{{ order.rucCliente }}</td>
+        <td>{{ order.fechaInicio }}</td>
+        <td>{{ order.fechaFinal}}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+<div class="table-container">
+    <table [class.hidden]="selectedCategory !== 'facturas'" id="table-facturas">
+      <thead>
+        <tr>
+          <th>Factura ID</th>
+          <th>Fecha</th>
+          <th>Cliente</th>
+          <th>Monto Total</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let factura of facturas">
+          <td>{{ factura.facturaID }}</td>
+          <td>{{ factura.fecha }}</td>
+          <td>{{ factura.cliente }}</td>
+          <td>{{ factura.montoTotal | currency }}</td>
+          <td>{{ factura.estado }}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>

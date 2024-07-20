@@ -1,0 +1,30 @@
+<div class="header">
+    <div class="search-bar">
+        <input type="text" [(ngModel)]="searchMed" name="searchMed" required>
+      <button (click)="performSearch()">Search</button>
+    </div>
+    <div class="results">
+      <div *ngFor="let result of searchResults" class="result-item">
+        {{ result }}
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <h2>Register New Medication</h2>
+    <form (ngSubmit)="registerMedication()">
+      <div class="form-group">
+        <label for="medName">Medication Name</label>
+        <input type="text" [(ngModel)]="medName" name="medName" required>
+      </div>
+      <div class="form-group">
+        <label for="medDescription">Description</label>
+        <textarea [(ngModel)]="medDescription" name="medDescription" rows="4" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="medDosage">Dosage</label>
+        <input type="text" [(ngModel)]="medDosage" name="medDosage" required>
+      </div>
+      <button type="submit">Register Medication</button>
+    </form>
+  </div>
+  
