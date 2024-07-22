@@ -88,6 +88,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "farmacia-project:build:production",
+              "serveTarget": "farmacia-project:serve:production"
+            },
+            "development": {
+              "buildTarget": "farmacia-project:build:development",
+              "serveTarget": "farmacia-project:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

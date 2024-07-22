@@ -5,6 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { MainNavbarComponent } from './pages/main-navbar/main-navbar.component';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,

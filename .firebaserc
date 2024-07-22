@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "farmacia-project-6a1c8"
+  },
+  "targets": {
+    "farmacia-project-6a1c8": {
+      "hosting": {
+        "farmacia-project": [
+          "farmacia-project-6a1c8"
+        ]
+      }
+    }
+  }
+}
