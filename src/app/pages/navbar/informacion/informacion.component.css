@@ -1,0 +1,89 @@
+.info-container {
+    width: 100%;
+    height: max-content;
+    display: grid;
+    align-content: center;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.integrantes-space {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+ul {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 10px;    /* Remove default padding */
+    margin: 0;             /* Remove default margin */
+    background-color: #f9f9f9; /* Background color for the list */
+    width: 200px;          /* Set width for the list */
+    border: 1px solid #ddd; /* Border around the list */
+    border-radius: 5px;    /* Rounded corners */
+}
+
+ul li {
+    padding: 10px 15px;    /* Padding inside each list item */
+    border-bottom: 1px solid #ddd; /* Border between list items */
+}
+
+ul li:last-child {
+    border-bottom: none;   /* Remove border from the last list item */
+}
+
+ul li:hover {
+    background-color: #f1f1f1; /* Background color on hover */
+    cursor: pointer;          /* Cursor style on hover */
+}
+
+ul li::before {
+    content: ">";            /* Custom bullet */
+    color: #414f5e;          /* Bullet color */
+    display: inline-block;   /* Keep bullet inline with text */
+    width: 1em;              /* Space for bullet */
+    margin-left: -1em;       /* Position bullet correctly */
+}
+
+.banner {
+    width: 100%;          /* Make the image span the full width of its container */
+    height: 100%;         /* Maintain the aspect ratio of the image */
+    max-height: 90%;    /* Set a maximum height for the banner */
+    object-fit: cover;    /* Ensure the image covers the container without stretching */
+}
+.information-space {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px;                      /* Space between the columns */
+    padding: 20px;                  /* Padding around the container */
+    background-color: #f0f0f0;      /* Background color for the container */
+    border-radius: 10px;            /* Rounded corners */
+    border: 1px solid #ddd;         /* Border around the container */
+}
+
+.mision-space, .vision-space {
+    background-color: #ffffff;      /* Background color for each block */
+    padding: 20px;                  /* Padding inside each block */
+    border-radius: 5px;             /* Rounded corners for each block */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for each block */
+}
+
+.mision-space h2, .vision-space h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.mision-space p, .vision-space p {
+    font-size: 16px;
+    line-height: 1.5;
+}
